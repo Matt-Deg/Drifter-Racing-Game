@@ -12,24 +12,29 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    // Constants for input axis names
     private const string HORIZONTAL = "Horizontal";
     private const string VERTICAL = "Vertical";
 
+    // Input variables
     private float horizontalInput;
     private float verticalInput;
     private float currentSteerAngle;
     private float currentbreakForce;
     private bool isBreaking;
 
+    // Motor parameters
     [SerializeField] private float motorForce;
     [SerializeField] private float breakForce;
     [SerializeField] private float maxSteerAngle;
 
+    // Wheel colliders for physics simulation
     [SerializeField] private WheelCollider frontLeftWheelCollider;
     [SerializeField] private WheelCollider frontRightWheelCollider;
     [SerializeField] private WheelCollider rearLeftWheelCollider;
     [SerializeField] private WheelCollider rearRightWheelCollider;
 
+    // Wheel transforms for visual representation
     [SerializeField] private Transform frontLeftWheelTransform;
     [SerializeField] private Transform frontRightWheeTransform;
 
